@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Aggregator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container py-4">
+      <h1 class="text-center mb-4">📰 News Aggregator</h1>
+
+      <div class="d-flex mb-3">
+        <select id="category" class="form-select me-2">
+          <option value="general">General</option>
+          <option value="technology">Technology</option>
+          <option value="business">Business</option>
+          <option value="sports">Sports</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="health">Health</option>
+          <option value="science">Science</option>
+        </select>
+        <input
+          type="text"
+          id="searchInput"
+          class="form-control me-2"
+          placeholder="Search news..."
+        />
+        <button class="btn btn-primary" onclick="searchNews()">Search</button>
+      </div>
+
+      <div id="newsContainer" class="row g-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
