@@ -1,25 +1,22 @@
-# News Aggregator
+#  News Aggregator Web App
 
-This is a simple News Aggregator web app built using **HTML**, **CSS**, **JavaScript**, and **Bootstrap**. It fetches the latest news headlines from the [NewsAPI](https://newsapi.org/) based on category or keyword search.
+A simple news aggregator built with **HTML**, **CSS**, **JavaScript**, and **Bootstrap**, powered by **NewsData.io API**.
 
 ##  Features
 
-- View top headlines by category (Technology, Business, Sports, etc.)
-- Search for news by keyword
-- Responsive card layout using Bootstrap
-- Clean and modern UI
+- View top news by category
+- Search by keyword
+- Responsive UI with card layout
+- Live demo via GitHub Pages or Netlify
+
+## Tech Stack
+
+- HTML, CSS, JS, Bootstrap
+- NewsData.io API
 
 ##  Live Demo
 
-[🔗 View Live Website](https://manjunathb-new-aggregator.netlify.app)
+[Click here to view](https://manjunathb-news-aggregator.netlify.app/)
 
-> Replace this link with your GitHub Pages URL.
 
-# Technologies Used
-
-- HTML5
-- CSS3
-- Bootstrap 5
-- JavaScript 
-- NewsAPI (https://newsapi.org)
 
