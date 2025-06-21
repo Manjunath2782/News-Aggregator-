@@ -11,7 +11,7 @@ This is a simple News Aggregator web app built using **HTML**, **CSS**, **JavaSc
 
 ##  Live Demo
 
-[🔗 View Live Website](https://your-username.github.io/news-aggregator)
+[🔗 View Live Website](https://manjunathb-new-aggregator.netlify.app)
 
 > Replace this link with your GitHub Pages URL.
 
