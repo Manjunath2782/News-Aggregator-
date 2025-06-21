@@ -5,37 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Aggregator</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
-
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container py-4">
-      <h1 class="text-center mb-4">📰 News Aggregator</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">📰 News Aggregator</a>
+      </div>
+    </nav>
 
-      <div class="d-flex mb-3">
-        <select id="category" class="form-select me-2">
-          <option value="general">General</option>
-          <option value="technology">Technology</option>
-          <option value="business">Business</option>
-          <option value="sports">Sports</option>
-          <option value="entertainment">Entertainment</option>
-          <option value="health">Health</option>
-          <option value="science">Science</option>
-        </select>
-        <input
-          type="text"
-          id="searchInput"
-          class="form-control me-2"
-          placeholder="Search news..."
-        />
-        <button class="btn btn-primary" onclick="searchNews()">Search</button>
+    <div class="container mt-4">
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <select class="form-select" id="category">
+            <option value="top">Top</option>
+            <option value="business">Business</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="environment">Environment</option>
+            <option value="food">Food</option>
+            <option value="health">Health</option>
+            <option value="politics">Politics</option>
+            <option value="science">Science</option>
+            <option value="sports">Sports</option>
+            <option value="technology">Technology</option>
+            <option value="world">World</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <input
+            type="text"
+            class="form-control"
+            id="searchInput"
+            placeholder="Search news by keyword..."
+          />
+        </div>
+        <div class="col-md-2 d-grid">
+          <button class="btn btn-primary" onclick="searchNews()">Search</button>
+        </div>
       </div>
 
-      <div id="newsContainer" class="row g-4"></div>
+      <div class="row" id="newsContainer">
+        <!-- News cards will appear here -->
+      </div>
     </div>
+
+    <footer class="text-center py-4 text-muted bg-light mt-5">
+      © 2025 News Aggregator by Manjunath B
+    </footer>
 
     <script src="script.js"></script>
   </body>
