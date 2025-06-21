@@ -1,99 +1,41 @@
-/* Import a clean Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f4f6f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-h1 {
-  font-weight: 600;
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 30px;
-  color: #222;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-select, input[type="text"] {
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
-  border: 1px solid #ccc;
-  transition: all 0.3s ease;
-}
-
-select:focus, input[type="text"]:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
-}
-
-.btn-primary {
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
 }
 
 .card {
   border: none;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
 }
 
 .card-img-top {
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
   height: 180px;
   object-fit: cover;
-}
-
-.card-body {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .card-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #222;
+  color: #333;
 }
 
 .card-text {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #555;
-  flex-grow: 1;
+}
+
+footer {
+  font-size: 0.9rem;
 }
 
 .btn-outline-primary {
-  margin-top: 1rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-outline-primary:hover {
-  background-color: #007bff;
-  color: #fff;
+  border-radius: 30px;
 }
