@@ -1,41 +1,58 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f8;
+const API_KEY = 'pub_dd442e33984c4efba0452e92af31c6fa'; 
+const BASE_URL = 'https://newsdata.io/api/1/news';
+const newsContainer = document.getElementById('newsContainer');
+const categorySelect = document.getElementById('category');
+const searchInput = document.getElementById('searchInput');
+
+window.onload = () => {
+  fetchNews();
+  categorySelect.addEventListener('change', fetchNews);
+};
+
+function fetchNews() {
+  const category = categorySelect.value;
+  const url = `${BASE_URL}?apikey=${API_KEY}&country=in&category=${category}&language=en`;
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => displayNews(data.results || []))
+    .catch(err => console.error('Error fetching news:', err));
 }
 
-.card {
-  border: none;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+function searchNews() {
+  const query = searchInput.value.trim();
+  if (!query) return;
+
+  const url = `${BASE_URL}?apikey=${API_KEY}&q=${query}&language=en`;
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => displayNews(data.results || []))
+    .catch(err => console.error('Error searching news:', err));
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+function displayNews(articles) {
+  newsContainer.innerHTML = '';
+  if (articles.length === 0) {
+    newsContainer.innerHTML = '<p class="text-center">No articles found.</p>';
+    return;
+  }
 
-.card-img-top {
-  height: 180px;
-  object-fit: cover;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-}
+  articles.forEach(article => {
+    const col = document.createElement('div');
+    col.className = 'col-md-4';
 
-.card-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-}
+    col.innerHTML = `
+      <div class="card h-100">
+        <img src="${article.image_url || 'https://via.placeholder.com/300x180'}" class="card-img-top" alt="News image">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">${article.title}</h5>
+          <p class="card-text">${article.description || ''}</p>
+          <a href="${article.link}" class="btn btn-outline-primary mt-auto" target="_blank">Read More</a>
+        </div>
+      </div>
+    `;
 
-.card-text {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-footer {
-  font-size: 0.9rem;
-}
-
-.btn-outline-primary {
-  border-radius: 30px;
+    newsContainer.appendChild(col);
+  });
 }
