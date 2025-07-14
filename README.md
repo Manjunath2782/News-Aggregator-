@@ -16,7 +16,7 @@ A simple news aggregator built with **HTML**, **CSS**, **JavaScript**, and **Boo
 
 ##  Live Demo
 
-[Click here to view](https://manjunathb-news-aggregator.netlify.app/)
+[Click here to view](https://manjunath-news-aggregator.netlify.app/)
 
 
 
